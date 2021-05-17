@@ -1,0 +1,124 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+
+    /* Colors */
+    --sedans: hsl(31, 77%, 52%);
+    --suvs: hsl(184, 100%, 22%);
+    --luxury: hsl(179, 100%, 13%);
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --bkg-hd-btn: hsl(0, 0%, 95%);
+    --white: #FFF;
+
+    /* Fonts */
+    --primary-font: 'Lexend Deca', sans-serif;
+    --second-font: 'Big Shoulders Display', cursive;
+}
+
+/* Globals */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 15px;
+    font-family: var(--primary-font);
+}
+
+.center-cnt {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+}
+
+/* Main card */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.grid-item {
+    padding: 45px;
+    height: 550px;
+    width: 300px;
+    box-shadow: 2px 2px 10px gray;
+}
+.grid-item:nth-child(1) {
+    background-color: var(--sedans);
+    border-radius: 10px 0 0 10px;
+}
+.grid-item:nth-child(2) {
+    background-color: var(--suvs);
+}
+.grid-item:nth-child(3) {
+    background-color: var(--luxury);
+    border-radius: 0 10px 10px 0;
+}
+
+/* Main info card */
+.title {
+    font-size: 40px;
+    font-family: var(--second-font);
+    color: var(--white);
+    text-transform: uppercase;
+}
+.info {
+    font-family: var(--primary-font);
+    color: var(--paragraphs);
+    line-height: 1.7;
+}
+
+/* Button */
+.btn {
+    font-family: var(--primary-font);
+    margin-top: 100px;
+    outline: none;
+    border: 3px solid var(--white);
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 50px;
+    width: 70%;
+    box-shadow: 1px 1px 5px rgba(56, 56, 56, 0.5);
+    cursor: pointer;
+    font-weight: bold;
+}
+.grid-item:nth-child(1) > .btn {
+    color: var(--sedans);
+}
+.grid-item:nth-child(2) > .btn {
+    color: var(--suvs);
+}
+.grid-item:nth-child(3) > .btn {
+    color: var(--luxury);
+}
+.grid-item > .btn:hover {
+    background-color: rgba(255, 255, 255, 0);
+    color: var(--white);
+}
+
+/* Media Query MOBILE */
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        height: 90vh;
+    }
+    .grid-item:nth-child(1) {
+        border-radius: 10px 10px 0 0;
+    }
+    .grid-item:nth-child(2) {
+        background-color: var(--suvs);
+    }
+    .grid-item:nth-child(3) {
+        background-color: var(--luxury);
+        border-radius: 0 0 10px 10px;
+    }
+}
