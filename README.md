@@ -30,7 +30,9 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/brujavsen/3-column-preview-card-bruno)
-- Live Site URL: [GitHub Pages](https://brujavsen.github.io/3-column-preview-card-bruno/)
+- Live Site URL: 
+[GitHub Pages](https://brujavsen.github.io/3-column-preview-card-bruno/)
+[Netlify](https://3-column-card-main-bruno.netlify.app/)
 
 ## My process
 
